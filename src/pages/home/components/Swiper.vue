@@ -1,0 +1,44 @@
+<template>
+  <div class="wrapper">
+    <swiper :options="swiperOption">
+        <swiper-slide v-for="item of swiperList" :key="item.id">
+            <img class="swiper-img" :src="item.imgUrl" />
+        </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
+    </swiper>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HomeSwiper',
+  data () {
+    return {
+      swiperOption: {
+        pagination: '.swiper-pagination',
+        loop: true
+      },
+      swiperList: [{
+        id: '0001',
+        imgUrl: 'https://img.mukewang.com/5f0bc7880001aba818720764.jpg'
+      }, {
+        id: '0002',
+        imgUrl: 'https://img.mukewang.com/5f0283450001cbbc18720764.jpg'
+      }]
+    }
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+.wrapper >>> .swipper-pagination-bullet-active
+    background: #ffffff
+.wrapper
+    overflow: hidden
+    width: 100%
+    height: 0
+    padding-bottom: 41%
+    background-color: #eeeeee
+    .swiper-img
+        width: 100%
+</style>
