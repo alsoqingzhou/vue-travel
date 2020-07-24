@@ -26,12 +26,12 @@ export default {
         title: '北京野生动物园',
         desc: '敢与森林之王近距离接触吗'
       }, {
-        id: '0001',
+        id: '0002',
         imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_200x200_d9ebe2fd.jpg',
         title: '北京野生动物园',
         desc: '敢与森林之王近距离接触吗'
       }, {
-        id: '0001',
+        id: '0003',
         imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_200x200_d9ebe2fd.jpg',
         title: '北京野生动物园',
         desc: '敢与森林之王近距离接触吗'
