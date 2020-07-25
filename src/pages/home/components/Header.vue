@@ -7,10 +7,12 @@
             <span class="iconfont search">&#xe632;</span>
             输入城市/景点/游玩主题
         </div>
-        <div class="header-right">
-            {{this.city}}
-            <span class="iconfont arrow">&#xe6aa;</span>
-        </div>
+        <router-link to="/city">
+            <div class="header-right">
+                {{this.city}}
+                <span class="iconfont arrow">&#xe6aa;</span>
+            </div>
+        </router-link>
     </div>
 </template>
 
@@ -26,31 +28,32 @@ export default {
 <style lang="stylus" scoped>
     @import '~styles/varibles.styl'
     .header
-        display flex
-        line-height .86rem
-        background $bgColor
-        color #ffffff
+        display: flex
+        line-height: $headerHeight
+        background: $bgColor
+        color: #ffffff
         .header-left
-            width .64rem
-            float left
+            width: .64rem
+            float: left
             .back
-                margin-left .2rem
+                margin-left: .2rem
         .header-input
-            flex 1
-            height .64rem
-            line-height .64rem
-            margin-top .12rem
-            margin-left .2rem
-            background #ffffff
-            border-radius .1rem
-            color #cccccc
+            flex: 1
+            height: .61rem
+            line-height: .61rem
+            margin-top: .12rem
+            margin-left: .2rem
+            background: #ffffff
+            border-radius: .1rem
+            color: #cccccc
             .search
-                margin-left .1rem
+                margin-left: .1rem
         .header-right
-            width 1.24rem
-            float right
-            text-align center
+            width: 1.24rem
+            float: right
+            text-align: center
+            color: #ffffff
             .arrow
-                margin-left -.1rem
-                font-size .25rem
+                margin-left: -.1rem
+                font-size: .25rem
 </style>
