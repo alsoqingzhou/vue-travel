@@ -1,15 +1,12 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerClick">
-      <img
-        class="banner-img"
-        src="http://img1.qunarzz.com/sight/p0/1507/cc/19733fc0135062788140cbb48ae606a7.water.jpg_350x240_05ea2c18.jpg"
-      />
+      <img class="banner-img" :src="img">
       <div class="banner-info">
-        <div class="banner-title">北京野生动物园(AAAA景区)</div>
+        <div class="banner-title">{{this.title}}</div>
         <div class="banner-num">
           <span class="iconfont banner-icon">&#xe635;</span>
-          35
+          {{this.imgs.length}}
         </div>
       </div>
     </div>
@@ -25,11 +22,14 @@
 import CommonGallary from 'common/gallary/Gallary'
 export default {
   name: 'DetailBanner',
+  props: {
+    title: String,
+    img: String,
+    imgs: Array
+  },
   data () {
     return {
-      showGallary: false,
-      imgs: ['http://img1.qunarzz.com/sight/p0/2002/f6/f60df9dd1ce24076a3.img.jpg_350x240_4232328e.jpg',
-        'http://img1.qunarzz.com/sight/p39/201211/05/0253fe2d21086d9f93835fbb.jpg_350x240_8f00b658.jpg']
+      showGallary: false
     }
   },
   methods: {
@@ -51,7 +51,7 @@ export default {
   position: relative;
   overflow: hidden;
   height: 0;
-  padding-bottom: 68.57%;
+  padding-bottom: 55%;
 
   .banner-img {
     width: 100%;
